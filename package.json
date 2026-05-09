@@ -1,0 +1,14 @@
+{
+  "name": "smart-cleaner",
+  "version": "1.0.0",
+  "description": "Workflow and records management for business operations",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^33.0.0"
+  },
+  "author": "Internal Tools Team",
+  "license": "UNLICENSED"
+}

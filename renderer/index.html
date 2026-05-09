@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Cleaner</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self';">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app-container">
+    <!-- Custom Title Bar (glassmorphic) -->
+    <header id="titlebar">
+      <div id="titlebar-drag">
+        <span id="titlebar-name">Smart Cleaner</span>
+      </div>
+      <div id="titlebar-controls" class="platform-windows-linux">
+        <button id="min-btn" class="titlebar-btn">—</button>
+        <button id="max-btn" class="titlebar-btn">□</button>
+        <button id="close-btn" class="titlebar-btn">✕</button>
+      </div>
+    </header>
+
+    <!-- Sidebar + Content (below title bar) -->
+    <div id="main-area">
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h1>Smart Cleaner</h1>
+          <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+        <ul id="nav-list">
+          <li><a href="#dashboard" class="nav-link active" data-section="dashboard">Dashboard</a></li>
+          <li><a href="#records" class="nav-link" data-section="records">Records</a></li>
+          <li><a href="#tasks" class="nav-link" data-section="tasks">Tasks</a></li>
+          <li><a href="#calendar" class="nav-link" data-section="calendar">Calendar</a></li>
+          <li><a href="#reports" class="nav-link" data-section="reports">Reports</a></li>
+          <li><a href="#audit" class="nav-link" data-section="audit">Audit Log</a></li>
+          <li><a href="#settings" class="nav-link" data-section="settings">Settings</a></li>
+          <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        </ul>
+        <div class="sidebar-footer">
+          <span class="app-version">v1.0.0</span>
+        </div>
+      </nav>
+
+      <main id="content">
+        <div id="section-placeholder">
+          <p>Select a section from the sidebar.</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modals container -->
+  <div id="modal-overlay" class="hidden"></div>
+  <div id="modal-container" class="hidden"></div>
+
+  <!-- Toast notification -->
+  <div id="toast" class="hidden"></div>
+
+  <!-- Load scripts in dependency order -->
+  <script src="js/modules/utils.js"></script>
+  <script src="js/modules/seedData.js"></script>
+  <script src="js/modules/navigation.js"></script>
+  <script src="js/modules/dashboard.js"></script>
+  <script src="js/modules/records.js"></script>
+  <script src="js/modules/tasks.js"></script>
+  <script src="js/modules/calendar.js"></script>
+  <script src="js/modules/reports.js"></script>
+  <script src="js/modules/auditLog.js"></script>
+  <script src="js/modules/settings.js"></script>
+  <script src="js/modules/about.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
